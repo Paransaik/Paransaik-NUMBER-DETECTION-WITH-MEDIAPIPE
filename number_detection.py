@@ -56,11 +56,11 @@ while True:
                     if(fingercount == 5):
                         print("mjjjjjjjjjj!")
 
-                #     cv2.putText(img, str(fingercount), (25, 430), cv2.FONT_HERSHEY_PLAIN, 6, (0, 0, 0), 5)
-                #
-                # draw.draw_landmarks(img, handlms, medhands.HAND_CONNECTIONS,
-                #                     draw.DrawingSpec(color=(0, 255, 204), thickness=2, circle_radius=2),
-                #                     draw.DrawingSpec(color=(0, 0, 0), thickness=2, circle_radius=3))
+                    cv2.putText(img, str(fingercount), (25, 430), cv2.FONT_HERSHEY_PLAIN, 6, (0, 0, 0), 5)
+
+                draw.draw_landmarks(img, handlms, medhands.HAND_CONNECTIONS,
+                                    draw.DrawingSpec(color=(0, 255, 204), thickness=2, circle_radius=2),
+                                    draw.DrawingSpec(color=(0, 0, 0), thickness=2, circle_radius=3))
 
     # fps counter
     # ctime = time.time()
@@ -70,10 +70,10 @@ while True:
     # fps display
     # cv2.putText(img, f'FPS:{str(int(fps))}', (0, 12), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0), 1)
 
-    # cv2.imshow("hand gestures", img)
+    cv2.imshow("hand gestures", img)
 
     # press q to quit
-    # if cv2.waitKey(1) == ord('q'):
-    #     break
+    if cv2.waitKey(1) == ord('q'):
+        break
 
-# cv2.destroyAllWindows()
+cv2.destroyAllWindows()
